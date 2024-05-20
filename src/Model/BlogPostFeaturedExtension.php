@@ -23,7 +23,7 @@ class BlogPostFeaturedExtension extends DataExtension
     /**
      * {@inheritdoc}
      */
-    public function updateCMSFields(FieldList $fields)
+    protected function updateCMSFields(FieldList $fields)
     {
         // Add the checkbox in.
         $fields->addFieldToTab(

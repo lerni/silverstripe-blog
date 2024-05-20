@@ -90,7 +90,7 @@ class BlogFilter extends Lumberjack
     /**
      * {@inheritdoc}
      */
-    public function updateCMSFields(FieldList $fields)
+    protected function updateCMSFields(FieldList $fields)
     {
         $excluded = $this->owner->getExcludedSiteTreeClassNames();
 

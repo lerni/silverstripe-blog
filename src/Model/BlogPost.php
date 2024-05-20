@@ -491,7 +491,7 @@ class BlogPost extends Page
      *
      * Update the PublishDate to now if the BlogPost would otherwise be published without a date.
      */
-    public function onBeforePublish()
+    protected function onBeforePublish()
     {
         /**
          * @var DBDatetime $publishDate
@@ -509,7 +509,7 @@ class BlogPost extends Page
      *
      * Sets blog relationship on all categories and tags assigned to this post.
      */
-    public function onAfterWrite()
+    protected function onAfterWrite()
     {
         parent::onAfterWrite();
 

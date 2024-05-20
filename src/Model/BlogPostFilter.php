@@ -27,7 +27,7 @@ class BlogPostFilter extends DataExtension
      * @param SQLSelect $query
      * @param DataQuery $query
      */
-    public function augmentSQL(SQLSelect $query, DataQuery $dataQuery = null)
+    protected function augmentSQL(SQLSelect $query, DataQuery $dataQuery = null)
     {
 
         if (Controller::has_curr() && Controller::curr() instanceof LeftAndMain) {
@@ -60,7 +60,7 @@ class BlogPostFilter extends DataExtension
      * @param DataQuery $dataQuery
      * @param DataObject $dataObject
      */
-    public function augmentLoadLazyFields(SQLSelect &$query, DataQuery &$dataQuery = null, $dataObject)
+    protected function augmentLoadLazyFields(SQLSelect &$query, DataQuery &$dataQuery = null, $dataObject)
     {
         $blogPostTable = DataObject::getSchema()->tableName(BlogPost::class);
         $dataQuery->innerJoin(
