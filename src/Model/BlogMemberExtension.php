@@ -54,7 +54,7 @@ class BlogMemberExtension extends DataExtension
     /**
      * {@inheritdoc}
      */
-    public function onBeforeWrite()
+    protected function onBeforeWrite()
     {
         $count = 1;
 
@@ -108,7 +108,7 @@ class BlogMemberExtension extends DataExtension
     /**
      * {@inheritdoc}
      */
-    public function updateCMSFields(FieldList $fields)
+    protected function updateCMSFields(FieldList $fields)
     {
         $fields->removeByName('URLSegment');
 
