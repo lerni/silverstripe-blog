@@ -234,6 +234,6 @@ class GridFieldAddByDBField implements GridField_ActionProvider, GridField_HTMLP
         $forTemplate->Fields->push($textField);
         $forTemplate->Fields->push($addAction);
 
-        return [$this->targetFragment => $forTemplate->renderWith(self::class)];
+        return [$this->targetFragment => $forTemplate->renderWith(GridFieldAddByDBField::class)];
     }
 }

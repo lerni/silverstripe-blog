@@ -475,7 +475,7 @@ class Blog extends Page implements PermissionProvider
             return $extended;
         }
 
-        return Permission::checkMember($member, self::MANAGE_USERS);
+        return Permission::checkMember($member, Blog::MANAGE_USERS);
     }
 
     /**
@@ -499,7 +499,7 @@ class Blog extends Page implements PermissionProvider
             return true;
         }
 
-        return Permission::checkMember($member, self::MANAGE_USERS);
+        return Permission::checkMember($member, Blog::MANAGE_USERS);
     }
 
     /**
@@ -523,7 +523,7 @@ class Blog extends Page implements PermissionProvider
             return true;
         }
 
-        return Permission::checkMember($member, self::MANAGE_USERS);
+        return Permission::checkMember($member, Blog::MANAGE_USERS);
     }
 
     /**
