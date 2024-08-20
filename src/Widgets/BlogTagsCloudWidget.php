@@ -10,6 +10,7 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DB;
 use SilverStripe\Widgets\Model\Widget;
 use SilverStripe\Control\Controller;
+use SilverStripe\Dev\Deprecation;
 
 if (!class_exists(Widget::class)) {
     return;
@@ -17,6 +18,7 @@ if (!class_exists(Widget::class)) {
 
 /**
  * @method Blog Blog()
+ * @deprecated 4.3.0 Will be removed without equivalent functionality to replace it
  */
 class BlogTagsCloudWidget extends Widget
 {
@@ -51,6 +53,18 @@ class BlogTagsCloudWidget extends Widget
      * @var string
      */
     private static $table_name = 'BlogTagsCloudWidget';
+
+    public function __construct($record = [], $creationType = DataObject::CREATE_OBJECT, $queryParams = [])
+    {
+        Deprecation::withNoReplacement(function () {
+            Deprecation::notice(
+                '4.3.0',
+                'Will be removed without equivalent functionality to replace it',
+                Deprecation::SCOPE_CLASS
+            );
+        });
+        parent::__construct($record, $creationType, $queryParams);
+    }
 
     /**
      * {@inheritdoc}
