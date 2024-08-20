@@ -16,6 +16,8 @@ use SilverStripe\ORM\Queries\SQLSelect;
 use SilverStripe\Versioned\Versioned;
 use SilverStripe\View\ArrayData;
 use SilverStripe\Widgets\Model\Widget;
+use SilverStripe\Dev\Deprecation;
+use SilverStripe\ORM\DataObject;
 
 if (!class_exists(Widget::class)) {
     return;
@@ -26,6 +28,7 @@ if (!class_exists(Widget::class)) {
  *
  * @property string $ArchiveType
  * @property int $NumberToDisplay
+ * @deprecated 4.3.0 Will be removed without equivalent functionality to replace it
  */
 class BlogArchiveWidget extends Widget
 {
@@ -70,6 +73,18 @@ class BlogArchiveWidget extends Widget
      * @var string
      */
     private static $table_name = 'BlogArchiveWidget';
+
+    public function __construct($record = [], $creationType = DataObject::CREATE_OBJECT, $queryParams = [])
+    {
+        Deprecation::withNoReplacement(function () {
+            Deprecation::notice(
+                '4.3.0',
+                'Will be removed without equivalent functionality to replace it',
+                Deprecation::SCOPE_CLASS
+            );
+        });
+        parent::__construct($record, $creationType, $queryParams);
+    }
 
     /**
      * {@inheritdoc}
