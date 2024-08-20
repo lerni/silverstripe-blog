@@ -9,6 +9,8 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\ORM\DataList;
 use SilverStripe\Widgets\Model\Widget;
+use SilverStripe\Dev\Deprecation;
+use SilverStripe\ORM\DataObject;
 
 if (!class_exists(Widget::class)) {
     return;
@@ -18,6 +20,7 @@ if (!class_exists(Widget::class)) {
  * @method Blog Blog()
  *
  * @property int $NumberOfPosts
+ * @deprecated 4.3.0 Will be removed without equivalent functionality to replace it
  */
 class BlogFeaturedPostsWidget extends Widget
 {
@@ -54,6 +57,18 @@ class BlogFeaturedPostsWidget extends Widget
      * @var string
      */
     private static $table_name = 'BlogFeaturedPostsWidget';
+
+    public function __construct($record = [], $creationType = DataObject::CREATE_OBJECT, $queryParams = [])
+    {
+        Deprecation::withNoReplacement(function () {
+            Deprecation::notice(
+                '4.3.0',
+                'Will be removed without equivalent functionality to replace it',
+                Deprecation::SCOPE_CLASS
+            );
+        });
+        parent::__construct($record, $creationType, $queryParams);
+    }
 
     /**
      * {@inheritdoc}

@@ -5,14 +5,28 @@ namespace SilverStripe\Blog\Model;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Dev\Deprecation;
 
 /**
  * Adds a checkbox field for featured blog posts widget.
  *
  * @extends DataExtension<BlogPost>
+ * @deprecated 4.3.0 Will be removed without equivalent functionality to replace it
  */
 class BlogPostFeaturedExtension extends DataExtension
 {
+    public function __construct()
+    {
+        Deprecation::withNoReplacement(function () {
+            Deprecation::notice(
+                '4.3.0',
+                'Will be removed without equivalent functionality to replace it',
+                Deprecation::SCOPE_CLASS
+            );
+        });
+        parent::__construct();
+    }
+
     /**
      * @var array
      */
