@@ -10,7 +10,6 @@
 
 ### Suggested Modules
 
-* Silverstripe Widgets Module
 * Silverstripe Comments Module
 
 ## Installation

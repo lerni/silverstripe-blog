@@ -86,6 +86,7 @@ class BlogTag extends DataObject implements CategorisationObject
         $parent = ($ownerRecord instanceof SiteTree) ? $ownerRecord->Parent() : null;
         $field = TagField::create(
             $relationName,
+            /** @phpstan-ignore translation.key (we need the key to be dynamic here) */
             _t($ownerRecord->ClassName . '.' . $relationName, $fieldTitle),
             ($parent instanceof Blog) ? $parent->Tags() : static::get(),
             $ownerRecord->$relationName()

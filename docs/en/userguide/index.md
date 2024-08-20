@@ -6,7 +6,7 @@ summary: Working with blogging and comments in SilverStripe CMS.
 
 ## Before we begin
 
-Make sure that your SilverStripe CMS installation has the [Blog](https://addons.silverstripe.org/add-ons/silverstripe/blog/) module and optional, [Widgets](https://addons.silverstripe.org/add-ons/silverstripe/widgets/) and [Comments](https://addons.silverstripe.org/add-ons/silverstripe/comments/) modules installed.
+Make sure that your SilverStripe CMS installation has the [Blog](https://addons.silverstripe.org/add-ons/silverstripe/blog/) module and optional, and [Comments](https://addons.silverstripe.org/add-ons/silverstripe/comments/) modules installed.
 
 ## Blogging features
 
@@ -16,5 +16,4 @@ Make sure that your SilverStripe CMS installation has the [Blog](https://addons.
  * [Roles](roles.md)
  * [RSS Feed](rss-feed.md)
  * [Tags and categories](tags-and-categories.md)
- * [Using widgets](using-widgets.md)
  * [Managing comments](managing-comments.md)
