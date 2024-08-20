@@ -47,8 +47,8 @@ SilverStripe\Blog\Model\BlogPost:
 
 ## Extension points in Blog and BlogPost users and how to use
 Both Blog and BlogPost have methods which return the list of candidate users or authors. If the previously 
-mentioned methods of reducing this list are not suitable or you wish to roll your own, you can utilise a 
-DataExtension to get the control you require.
+mentioned methods of reducing this list are not suitable or you wish to roll your own, you can utilise an 
+Extension to get the control you require.
 
 For example in BlogPost:
 
@@ -68,9 +68,9 @@ protected function getCandidateAuthors()
 ```
 
 Note the line `$this->extend('updateCandidateAuthors', $list);` which allows you to call a 
-`updateCandidateAuthors` method in a DataExtension to the Blog Post class if you have not set a 
+`updateCandidateAuthors` method in a Extension to the Blog Post class if you have not set a 
 `restrict_authors_to_group` config, further filters the passed 
 in Member list before it gets sent back to the form field.
 
-See the documentation on [DataExtension](https://docs.silverstripe.org/en/developer_guides/extending/extensions/) for further implementation notes.
+See the documentation on [Extension](https://docs.silverstripe.org/en/developer_guides/extending/extensions/) for further implementation notes.
 

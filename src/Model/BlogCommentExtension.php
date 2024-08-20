@@ -3,14 +3,14 @@
 namespace SilverStripe\Blog\Model;
 
 use SilverStripe\Comments\Model\Comment;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
 /**
  * Adds Blog specific behaviour to Comment.
  *
- * @extends DataExtension<Comment>
+ * @extends Extension<Comment>
  */
-class BlogCommentExtension extends DataExtension
+class BlogCommentExtension extends Extension
 {
     /**
      * Extra CSS classes for styling different comment types.

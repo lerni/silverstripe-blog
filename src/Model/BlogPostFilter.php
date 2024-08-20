@@ -5,21 +5,21 @@ namespace SilverStripe\Blog\Model;
 use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Convert;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DataQuery;
 use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\ORM\Queries\SQLSelect;
 use SilverStripe\Security\Permission;
 use SilverStripe\Versioned\Versioned;
+use SilverStripe\Core\Extension;
 
 /**
  * This is responsible for filtering only published posts to users who do not have permission to
  * view non-published posts.
  *
- * @extends DataExtension<BlogPost>
+ * @extends Extension<BlogPost>
  */
-class BlogPostFilter extends DataExtension
+class BlogPostFilter extends Extension
 {
     /**
      * Augment queries so that we don't fetch unpublished articles.
