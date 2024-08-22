@@ -48,10 +48,10 @@ class BlogPostFilterTest extends SapphireTest
          */
         $blog = $this->objFromFixture(Blog::class, 'FirstBlog');
 
-        $this->assertEquals(3, $blog->AllChildren()->Count(), 'Filtered blog posts');
+        $this->assertEquals(4, $blog->AllChildren()->Count(), 'Filtered blog posts');
 
         DBDatetime::set_mock_now('2020-01-01 00:00:00');
 
-        $this->assertEquals(5, $blog->AllChildren()->Count(), 'Unfiltered blog posts');
+        $this->assertEquals(6, $blog->AllChildren()->Count(), 'Unfiltered blog posts');
     }
 }

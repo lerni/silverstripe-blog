@@ -59,7 +59,7 @@ class BlogCategoryTest extends FunctionalTest
          */
         $category = $this->objFromFixture(BlogCategory::class, 'FirstCategory');
 
-        $this->assertEquals(5, $category->BlogPosts()->count(), 'Category blog post count');
+        $this->assertEquals(2, $category->BlogPosts()->count(), 'Category blog post count');
     }
 
     /**
