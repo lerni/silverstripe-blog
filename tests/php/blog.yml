@@ -117,24 +117,6 @@ SilverStripe\Blog\Model\BlogTag:
     URLSegment: 'third-tag'
     BlogID: =>SilverStripe\Blog\Model\Blog.ThirdBlog
 
-  #Tags for Tag Cloud widget
-  PopularTag:
-    Title: 'Popular'
-    URLSegment: 'popular'
-    BlogID: =>SilverStripe\Blog\Model\Blog.FourthBlog
-  CoolTag:
-    Title: 'Cool'
-    URLSegment: 'cool'
-    BlogID: =>SilverStripe\Blog\Model\Blog.FourthBlog
-  CatTag:
-    Title: 'Cat'
-    URLSegment: 'cat'
-    BlogID: =>SilverStripe\Blog\Model\Blog.FourthBlog
-  KiwiTag:
-    Title: 'Kiwi'
-    URLSegment: 'kiwi'
-    BlogID: =>SilverStripe\Blog\Model\Blog.FourthBlog
-
 SilverStripe\Blog\Model\BlogPost:
   FirstBlogPost:
     ClassName: SilverStripe\Blog\Model\BlogPost
@@ -167,6 +149,13 @@ SilverStripe\Blog\Model\BlogPost:
     PublishDate: '2012-01-09 15:00:00'
     Content: >
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec accumsan dolor, at viverra nibh. Vivamus lectus magna, interdum sit amet libero non, fermentum semper nunc. Nunc eu arcu euismod mauris auctor venenatis. Integer sem lorem, varius iaculis congue et, blandit eget nisi. Quisque ullamcorper laoreet sagittis. Nulla enim metus, viverra ut commodo ut, imperdiet et velit. Sed tincidunt mi condimentum, sodales lectus id, dictum neque. Suspendisse placerat, nibh at mattis volutpat, mauris augue congue dui, lobortis tempor diam magna vitae ligula. Proin sed turpis quis enim maximus sodales sit amet id diam. Proin sollicitudin elementum suscipit.</p>
+  AnotherPostWithFirstCategory:
+    ClassName: SilverStripe\Blog\Model\BlogPost
+    Title: 'Another post with first category'
+    URLSegment: another-post-with-first-category
+    ParentID: =>SilverStripe\Blog\Model\Blog.FirstBlog
+    PublishDate: '2012-01-09 15:00:00'
+    Categories: =>SilverStripe\Blog\Model\BlogCategory.FirstCategory
   FirstFutureBlogPost:
     ClassName: SilverStripe\Blog\Model\BlogPost
     Title: 'Future Post'
@@ -207,39 +196,3 @@ SilverStripe\Blog\Model\BlogPost:
     ParentID: =>SilverStripe\Blog\Model\Blog.FourthBlog
     Authors: =>SilverStripe\Security\Member.Writer,=>SilverStripe\Security\Member.Contributor,=>SilverStripe\Security\Member.BlogEditor
     PublishDate: null
-
-  #Posts for the tag cloud widget test
-  TaggedPost1:
-    ClassName: SilverStripe\Blog\Model\BlogPost
-    Title: 'Tagged Post 1'
-    URLSegment: tagged-post-1
-    ParentID: =>SilverStripe\Blog\Model\Blog.FourthBlog
-    PublishDate: '2012-01-09 15:00:00'
-    Tags: =>SilverStripe\Blog\Model\BlogTag.PopularTag,=>SilverStripe\Blog\Model\BlogTag.CoolTag
-    Categories: =>SilverStripe\Blog\Model\BlogCategory.FirstCategory
-  TaggedPost2:
-    ClassName: SilverStripe\Blog\Model\BlogPost
-    Title: 'Tagged Post 2'
-    URLSegment: tagged-post-2
-    ParentID: =>SilverStripe\Blog\Model\Blog.FourthBlog
-    PublishDate: '2012-01-09 15:00:00'
-    Tags: =>SilverStripe\Blog\Model\BlogTag.PopularTag,=>SilverStripe\Blog\Model\BlogTag.CoolTag,=>SilverStripe\Blog\Model\BlogTag.CatTag
-    Categories: =>SilverStripe\Blog\Model\BlogCategory.FirstCategory
-  TaggedPost3:
-    ClassName: SilverStripe\Blog\Model\BlogPost
-    Title: 'Tagged Post 3'
-    URLSegment: tagged-post-3
-    ParentID: =>SilverStripe\Blog\Model\Blog.FourthBlog
-    PublishDate: '2012-01-09 17:20:00'
-    Tags: =>SilverStripe\Blog\Model\BlogTag.PopularTag,=>SilverStripe\Blog\Model\BlogTag.CoolTag,=>SilverStripe\Blog\Model\BlogTag.CatTag,=>SilverStripe\Blog\Model\BlogTag.KiwiTag
-    Categories: =>SilverStripe\Blog\Model\BlogCategory.FirstCategory
-  TaggedPost4:
-    ClassName: SilverStripe\Blog\Model\BlogPost
-    Title: 'Tagged Post 4'
-    URLSegment: tagged-post-4
-    ParentID: =>SilverStripe\Blog\Model\Blog.FourthBlog
-    PublishDate: '2012-04-09 15:00:00'
-    Tags: =>SilverStripe\Blog\Model\BlogTag.PopularTag
-    Categories: =>SilverStripe\Blog\Model\BlogCategory.FirstCategory
-
-

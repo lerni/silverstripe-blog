@@ -106,13 +106,11 @@ class BlogPost extends Page
 
     /**
      * The ProvideComments db column is defined in the silverstripe/comments module
-     * The InheritSideBar db column is defined in the silverstripe/widgets module
      *
      * @var array
      */
     private static $defaults = [
         'ShowInMenus'     => false,
-        'InheritSideBar'  => true,
         'ProvideComments' => true
     ];
 
