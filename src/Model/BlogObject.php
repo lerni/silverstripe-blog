@@ -90,7 +90,7 @@ trait BlogObject
     }
 
     /**
-     * Inherits from the parent blog or can be overwritten using a DataExtension.
+     * Inherits from the parent blog or can be overwritten using an Extension.
      *
      * @param null|Member $member
      *
@@ -124,7 +124,7 @@ trait BlogObject
     }
 
     /**
-     * Inherits from the parent blog or can be overwritten using a DataExtension.
+     * Inherits from the parent blog or can be overwritten using an Extension.
      *
      * @param null|Member $member
      *
@@ -142,7 +142,7 @@ trait BlogObject
     }
 
     /**
-     * Inherits from the parent blog or can be overwritten using a DataExtension.
+     * Inherits from the parent blog or can be overwritten using an Extension.
      *
      * @param null|Member $member
      *

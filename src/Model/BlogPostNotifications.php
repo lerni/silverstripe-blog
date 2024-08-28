@@ -4,18 +4,18 @@ namespace SilverStripe\Blog\Model;
 
 use SilverStripe\Comments\Model\Comment;
 use SilverStripe\Core\Config\Config;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\SS_List;
 use SilverStripe\Security\Member;
+use SilverStripe\Core\Extension;
 
 /**
  * Customise blog post to support comment notifications.
  *
  * Extends {@see BlogPost} with extensions to {@see CommentNotifiable}.
  *
- * @extends DataExtension<BlogPost>
+ * @extends Extension<BlogPost>
  */
-class BlogPostNotifications extends DataExtension
+class BlogPostNotifications extends Extension
 {
     /**
      * Configure whether to send notifications even for spam comments
