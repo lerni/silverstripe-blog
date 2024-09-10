@@ -10,6 +10,7 @@ use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\Security\Member;
 use SilverStripe\Security\Security;
 use SilverStripe\Versioned\Versioned;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class BlogPostTest extends SapphireTest
 {
@@ -21,9 +22,7 @@ class BlogPostTest extends SapphireTest
         parent::tearDown();
     }
 
-    /**
-     * @dataProvider canViewProvider
-     */
+    #[DataProvider('canViewProvider')]
     public function testCanView($date, $user, $page, $canView, $stage)
     {
         $userRecord = $this->objFromFixture(Member::class, $user);
@@ -45,7 +44,7 @@ class BlogPostTest extends SapphireTest
      *  - expected result
      *  - versioned stage
      */
-    public function canViewProvider()
+    public static function canViewProvider()
     {
         $someFutureDate = '2013-10-10 20:00:00';
         $somePastDate = '2009-10-10 20:00:00';
@@ -152,9 +151,8 @@ class BlogPostTest extends SapphireTest
     /**
      * @param string $type
      * @param string $expected
-     * @dataProvider monthlyArchiveLinkProvider
-     * @group wip
      */
+    #[DataProvider('monthlyArchiveLinkProvider')]
     public function testGetMonthlyArchiveLink($type, $expected)
     {
         /** @var BlogPost $blogPost */
@@ -168,7 +166,7 @@ class BlogPostTest extends SapphireTest
     /**
      * @return array[]
      */
-    public function monthlyArchiveLinkProvider()
+    public static function monthlyArchiveLinkProvider()
     {
         return [
             ['day', '/2013/10/1'],

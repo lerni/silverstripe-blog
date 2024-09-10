@@ -7,9 +7,6 @@ use SilverStripe\Dev\SapphireTest;
 use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\Security\Security;
 
-/**
- * @coversDefaultClass \SilverStripe\Blog\Model\BlogPostFilter
- */
 class BlogPostFilterTest extends SapphireTest
 {
     /**
@@ -33,7 +30,6 @@ class BlogPostFilterTest extends SapphireTest
 
     /**
      * Tests that unpublished articles are not returned
-     * @covers ::augmentSQL
      */
     public function testFilter()
     {
