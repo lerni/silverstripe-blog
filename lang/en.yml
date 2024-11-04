@@ -39,7 +39,7 @@ en:
     PERMISSIONS_CATEGORY: 'Blog permissions'
     PERMISSION_MANAGE_USERS_DESCRIPTION: 'Manage users for individual blogs'
     PERMISSION_MANAGE_USERS_HELP: 'Allow assignment of Editors, Writers, or Contributors to blogs'
-    PLURALNAME: 'Blogs'
+    PLURALNAME: Blogs
     PLURALS:
       one: 'A Blog'
       other: '{count} Blogs'
