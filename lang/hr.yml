@@ -26,7 +26,7 @@ hr:
     NoPosts: 'Nema zapisa'
     PERMISSIONS_CATEGORY: 'Blog dozvole'
     PERMISSION_MANAGE_USERS_DESCRIPTION: 'Upravljaj korisnike za pojedinačne blogove'
-    PLURALNAME: 'Osnovne stranice'
+    PLURALNAME: 'Bazne stranice'
     Posted: Objavljeno
     PostedIn: 'Objavljeno u'
     PostsPerPage: 'Postova po stranici'
@@ -48,7 +48,7 @@ hr:
     Authors: Autori
     Categories: Kategorije
     FeaturedImage: 'Izdvojena slika'
-    PLURALNAME: 'Osnovne stranice'
+    PLURALNAME: 'Bazna stranica'
     PageTitleLabel: 'Naslov posta'
     PublishDate: 'Datum objave'
     SINGULARNAME: 'Blog zapis'

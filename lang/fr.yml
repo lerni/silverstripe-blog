@@ -55,6 +55,7 @@ fr:
     Authors: Auteurs
     CUSTOMSUMMARY: 'Ajouter un sommaire personnalisé'
     Categories: Catégories
+    PLURALNAME: Billets
     PageTitleLabel: 'Titre du billet'
     PublishDate: 'Date de publication'
     PublishDate_Description: 'Sera mis à "maintenant" si publié sans valeur.'
