@@ -78,7 +78,7 @@ fi:
     CUSTOMSUMMARY: 'Lisää tiivistelmä'
     Categories: Kategoriat
     FeaturedImage: Kuvanosto
-    PLURALNAME: Pohjasivut
+    PLURALNAME: Artikkelit
     PLURALS:
       one: Blogipostaus
       other: '{count} Blogipostausta'

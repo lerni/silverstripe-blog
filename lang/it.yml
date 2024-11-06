@@ -33,7 +33,7 @@ it:
     PERMISSIONS_CATEGORY: 'Permessi del blog'
     PERMISSION_MANAGE_USERS_DESCRIPTION: 'Gestire utenti per i singoli blog'
     PERMISSION_MANAGE_USERS_HELP: "Consenti l'assegnazione di Editori, Scrittori o Collaboratori ai blog"
-    PLURALNAME: 'Pagine Base'
+    PLURALNAME: Blog
     Posted: Inserito
     PostedIn: 'Inserito il'
     PostsPerPage: 'Articoli Per Pagina'
@@ -63,7 +63,7 @@ it:
     CUSTOMSUMMARY: 'Aggiungi una Sintesi Personalizzata'
     Categories: Categorie
     FeaturedImage: 'Immagine in Evidenza'
-    PLURALNAME: 'Pagine Base'
+    PLURALNAME: 'Articoli del Blog'
     PageTitleLabel: 'Titolo Articolo'
     PublishDate: 'Data Pubblicazione'
     PublishDate_Description: 'Sarà impostato a "now" se pubblicato senza un valore.'
