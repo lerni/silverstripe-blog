@@ -83,7 +83,7 @@ de:
     CUSTOMSUMMARY: Zusammenfassung
     Categories: Kategorien
     FeaturedImage: Titelbild
-    PLURALNAME: 'Basis Seiten'
+    PLURALNAME: Blogbeiträge
     PLURALS:
       one: 'Ein Blogbeitrag'
       other: '{count} Blogbeiträge'
