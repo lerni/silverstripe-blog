@@ -37,7 +37,6 @@ nl:
     PERMISSIONS_CATEGORY: 'Blog rechten'
     PERMISSION_MANAGE_USERS_DESCRIPTION: 'Beheer gebruikers voor individuele blogs'
     PERMISSION_MANAGE_USERS_HELP: 'Laat toewijzing toe van Redacteurs, Auteurs en Co-auteurs'
-    PLURALNAME: Blog
     PLURALS:
       one: 'Eén blogpagina'
       other: "{count} blogpagina's"
@@ -73,7 +72,7 @@ nl:
     CUSTOMSUMMARY: 'Voeg een eigen samenvatting toe'
     Categories: Categorieën
     FeaturedImage: 'Prominente Afbeelding'
-    PLURALNAME: Artikel
+    PLURALNAME: 'Blog Artikel'
     PLURALS:
       one: 'Eén artikel'
       other: '{count} artikelen'

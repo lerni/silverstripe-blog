@@ -55,7 +55,7 @@ sk_SK:
     CUSTOMSUMMARY: 'Pridať vlastné zhrnutie'
     Categories: Kategórie
     FeaturedImage: 'Hlavný obrázok'
-    PLURALNAME: 'Základné stránky'
+    PLURALNAME: 'Príspevky v blogu'
     PageTitleLabel: 'Názov príspevku'
     PublishDate: 'Dátum publikovania'
     PublishDate_Description: 'V prípade zverejnenia bez hodnoty bude nastavený aktuálny dátum a čas.'
