@@ -60,7 +60,7 @@ class BlogPostFilter extends Extension
      * @param DataQuery $dataQuery
      * @param DataObject $dataObject
      */
-    protected function augmentLoadLazyFields(SQLSelect &$query, ?DataQuery &$dataQuery = null, $dataObject)
+    protected function augmentLoadLazyFields(SQLSelect &$query, ?DataQuery &$dataQuery, $dataObject)
     {
         $blogPostTable = DataObject::getSchema()->tableName(BlogPost::class);
         $dataQuery->innerJoin(
