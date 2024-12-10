@@ -142,6 +142,9 @@ class Blog extends Page implements PermissionProvider
 
     private static $class_description = 'Adds a blog to your website.';
 
+    /**
+     * @deprecated 4.4.0 Will be renamed to cms_icon_class
+     */
     private static $icon_class = 'font-icon-p-posts';
 
     /**
