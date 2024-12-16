@@ -51,13 +51,8 @@ trait BlogObject
         return $fields;
     }
 
-    /**
-     * {@inheritdoc}
-     * @return ValidationResult
-     */
-    public function validate()
+    public function validate(): ValidationResult
     {
-        /** @var ValidationResult $validation */
         $validation = parent::validate();
         if (!$validation->isValid()) {
             return $validation;
